@@ -1,17 +1,30 @@
-import React, { Component } from 'react';
-import classes from './App.module.css';
-import Layout from './Components/Layout/Layout';
-import Toolbar from './Controllers/Toolbar/Toolbar';
+import React, { Component } from "react";
+import classes from "./App.module.css";
+import Top from "./Components/Top/Top";
+import Best from "./Components/Best/Best";
+import New from "./Components/New/New";
+import Toolbar from "./Controllers/Toolbar/Toolbar";
+// import Home from "./Home/Home";
 
-class App extends Component{
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
-  render(){
-    return(
+class App extends Component {
+  render() {
+    return (
       <div className={classes.App}>
-        <Toolbar />
-        <Layout />
+        <Router>
+          <Toolbar />
+
+          <Switch>
+            <Route exact path="/" component={Top}  />
+            <Route exact path="/top" component={Top} />
+            <Route exact path="/best" component={Best} />
+            <Route exact path="/new" component={New} />
+
+          </Switch>
+        </Router>
       </div>
-    )
+    );
   }
 }
 

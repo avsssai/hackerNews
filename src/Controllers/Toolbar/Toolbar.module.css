@@ -3,8 +3,6 @@
     display: flex;
     justify-content: space-between;
     background-color: orange;
-    
-
 
 }
 
@@ -13,7 +11,7 @@
     float: right;
     margin-right: 20vw;
     font-size: xx-large;
-}
+}   
 .Item{
     margin: 0 10px;
 
@@ -26,7 +24,7 @@
     color: orange;
     border-radius: 2px;
     font-weight: 700;
-
+    text-decoration: none;
 
 }
 
