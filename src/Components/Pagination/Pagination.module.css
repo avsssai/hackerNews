@@ -1,0 +1,14 @@
+.Pagination {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.NumberButton{
+    font-size: small;
+    margin-left:2px ;
+    cursor: pointer;
+}
+
+.NumberButton::after {
+    content: " | ";
+}

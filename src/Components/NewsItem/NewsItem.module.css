@@ -1,0 +1,87 @@
+.NewsItem {
+  height: auto;
+  width: 60vw;
+  padding: 5px 16px 2px 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  margin: 10px 0px;
+  overflow: auto;
+  clear: both;
+}
+
+.Title {
+    display: flex;
+    font-size: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+    color: black;
+}
+.Title a {
+  color: black;
+  text-decoration: none;
+  
+}
+
+.By{
+    font-size: small;
+    margin:0px 10px 0px 0px;
+    color: #828282;  
+
+  }
+.Name{
+  font-weight: bolder;
+  font-style: italic;
+  color: #828282;
+}
+.Details {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 6px;
+  
+}
+.Comments{
+  font-size: small;
+
+  margin:0px 10px 0px 0px;
+  color: #828282;
+}
+
+.Score { 
+  font-size: small;
+  margin-right: 5px;
+  color: orange;
+  font-weight: 900;
+  display: inline;
+  line-height: normal;
+  line-height: 25px;
+
+}
+
+.ScoreArrow{
+  font-size: small;
+  color: orange;
+  font-weight: 900;
+  display: inline;
+  line-height: 25px;
+
+
+}
+.Srl{
+  font-size: medium;
+  opacity: 0.7;
+  color: grey;
+  display: inline;
+  line-height: 25px;
+
+}
+
+@media (max-width:500px){
+  .NewsItem {
+    width: 80vw;
+    
+  }
+  .Title {
+    font-size: medium;
+  }
+  
+  
+}
