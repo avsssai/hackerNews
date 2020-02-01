@@ -2,7 +2,7 @@
     color: red;
     display: flex;
     justify-content: space-between;
-    background-color: orange;
+    background-color: #FF6600;
 }
 
 .Items{
@@ -22,7 +22,7 @@
     margin: 5px 19vw;
     background-color: white;
     height: fit-content;
-    color: orange;
+    color: #FF6600;
     border-radius: 2px;
     font-weight: 700;
     text-decoration: none;

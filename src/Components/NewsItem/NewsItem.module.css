@@ -53,7 +53,7 @@
 .Score { 
   font-size: small;
   margin-right: 5px;
-  color: orange;
+  color: #FF6600;
   font-weight: 900;
   display: inline;
   line-height: normal;
@@ -63,7 +63,7 @@
 
 .ScoreArrow{
   font-size: small;
-  color: orange;
+  color: #FF6600;
   font-weight: 900;
   display: inline;
   line-height: 25px;

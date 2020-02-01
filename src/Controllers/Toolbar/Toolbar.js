@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const Toolbar = props => {
   return (
     <div className={classes.Toolbar}>
-      {/* <Link to="/" style={{ textDecoration: 'none' }}>
+      <Link to="/" style={{ textDecoration: 'none' }}>
       <div className={classes.Logo}>HackerNews</div>
-      </Link> */}
-      <div className={classes.Logo}>HackerNews</div>
+      </Link>
+      {/* <div className={classes.Logo}>HackerNews</div> */}
 
       <div className={classes.Items}>
         <Link to="/top" style={{ textDecoration: 'none' }}>
