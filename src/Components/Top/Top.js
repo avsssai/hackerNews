@@ -5,7 +5,9 @@ import NewsController from '../../Controllers/NewsController/NewsController';
 const Top = (props) => {
   return(
     <div className={classes.Layout}>
-        <NewsController className={classes.NewsController} source="https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty"/>
+        <NewsController 
+        className={classes.NewsController} 
+        source="https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty"/>
     </div>
   )
 }

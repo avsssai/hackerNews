@@ -3,12 +3,13 @@
     display: flex;
     justify-content: space-between;
     background-color: orange;
-
 }
 
 .Items{
     display: flex;
-    float: right;
+    position: relative;
+    left: 30px;
+    justify-content: flex-end;
     margin-right: 20vw;
     font-size: xx-large;
 }   
@@ -18,7 +19,7 @@
 }
 
 .Logo {
-    margin: 5px 20vw;
+    margin: 5px 19vw;
     background-color: white;
     height: fit-content;
     color: orange;
@@ -44,5 +45,6 @@
     }
     .Items{
         margin: auto;
+        left: 0;
     }
 }

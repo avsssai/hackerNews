@@ -13,10 +13,13 @@ class NewsItem extends Component{
         this.setState({
           article:res
         });
-        console.log(res);
       })
       .catch(err=>console.log(err));
   }
+  click = ()=>{
+    this.props.commentsClicked();
+  }
+
   render(){
     const article = this.state.article;
     if(article && article.data){
@@ -27,18 +30,30 @@ class NewsItem extends Component{
       var score = article.data.score;
     }else{
     }
+    const string = String(url);
+    // eslint-disable-next-line
+    var matches = string.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+
+    var domainName = matches && matches[1];  // domain will be null if no match is found
+
+
+    // const domainPattern = string.match(urlPattern);
+    // var domainName = domainPattern[1];
     return(
       <div className={classes.NewsItem}>
 
           <div className={classes.Title}>
             <div className={classes.Srl}>{this.props.srl}. </div>
-            <div className={classes.ScoreArrow}>&#8679;</div>
-            <div className={classes.Score}>{score}</div>
             <a href={url}>{title}</a>
+
+            <span className={classes.Domain}> ({domainName})</span>
+
           </div>
           <div className={classes.Details}>
+          <div className={classes.Score}>{score} points</div>
+
             <div className={classes.By}>by <span className={classes.Name}>{by}</span></div>
-            <div className={classes.Comments}>comments({descendants})</div>
+            <div className={classes.Comments} onClick={this.click}>comments({descendants})</div>
 
 
           </div>

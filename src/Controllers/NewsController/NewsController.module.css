@@ -1,10 +1,10 @@
 .NewsController {
-    margin: 20px 20vw;
+    margin: 20px 19vw;
     
 }
 
 @media(max-width:500px){
     .NewsController {
-        margin:17vw 5vw;
+        margin:14vw 4.5vw;
     }
 }

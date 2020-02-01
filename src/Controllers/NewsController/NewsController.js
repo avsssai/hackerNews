@@ -30,6 +30,9 @@ class NewsController extends Component {
         })
         console.log(num);
     }
+    commentsClicked = (item) => {
+        console.log(item)
+    }
     render(){
         let data = this.state.articles && this.state.articles.data;
         if(data){
@@ -40,7 +43,7 @@ class NewsController extends Component {
             
             var newsItems = (
                 news.map((item,id) => {
-                    return <NewsItem id={item} key={item} srl={pageNumber+id+1}/>
+                    return <NewsItem id={item} key={item} srl={pageNumber+id+1} commentsClicked={()=>this.commentsClicked(item)}/>
                 })
             )
     
