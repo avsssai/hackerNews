@@ -21,7 +21,7 @@ class App extends Component {
             <Route exact path="/top" component={Top}  />
             <Route exact path="/best" component={Best} />
             <Route exact path="/new" component={New} />
-            <Route exact path="/comments" component={Comments} />
+            <Route exact path="/comments/:id" component={Comments} />
           </Switch>
         </Router>
       </div>

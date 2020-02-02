@@ -28,6 +28,7 @@ class NewsItem extends Component{
       var descendants = article.data.descendants;
       var url = article.data.url;
       var score = article.data.score;
+      var id = article.data.id;
     }else{
     }
     const string = String(url);
@@ -35,8 +36,8 @@ class NewsItem extends Component{
     var matches = string.match(/^https?\:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
 
     var domainName = matches && matches[1];  // domain will be null if no match is found
-
-
+    var commentsRoute = `/comments/${id}`;
+    
     // const domainPattern = string.match(urlPattern);
     // var domainName = domainPattern[1];
     return(
@@ -53,7 +54,7 @@ class NewsItem extends Component{
           <div className={classes.Score}>{score} points</div>
 
             <div className={classes.By}>by <span className={classes.Name}>{by}</span></div>
-            <div className={classes.Comments} onClick={this.click}>comments({descendants})</div>
+            <a className={classes.Comments} onClick={this.click} href={commentsRoute}>comments({descendants})</a>
 
 
           </div>

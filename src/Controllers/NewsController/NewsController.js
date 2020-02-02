@@ -3,6 +3,7 @@ import classes from "./NewsController.module.css";
 import NewsItem from '../../Components/NewsItem/NewsItem';
 import Pagination from '../../Components/Pagination/Pagination';
 import Axios from "axios";
+import Loader from '../../Components/Loader/Loader';
 
 class NewsController extends Component {
     state = {
@@ -48,7 +49,7 @@ class NewsController extends Component {
             )
     
         }else{
-            news = <h2>Loading....</h2>
+            newsItems = <Loader />;
         }
         return (
             <div className={classes.NewsController}>

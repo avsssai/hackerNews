@@ -1,14 +1,16 @@
 import React,{Component} from "react";
+import { useParams } from "react-router-dom";
 
-class Comments extends Component {
-
-    render(){
+const Comments = () => {
+    
+    
+    let { id } = useParams();
         return (
             <div>
-                <h3>Comments</h3>
+    <h3>Comments for post number : {id}</h3>
             </div>
         )
-    }
+    
 }
 
 export default Comments;
